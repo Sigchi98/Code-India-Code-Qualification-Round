@@ -1,0 +1,45 @@
+
+int main() {
+	//code
+	int T;
+	cin>>T;
+	while(T--){
+	    int x, count = 0;
+	    int a,b;
+	    cin>>a >>b;
+	    if(a<b){
+	        x= (a+b);
+	        if(x%2==0){
+	            x=x/2;
+	            a=a+x;
+	            count++;
+	            if(a==b) cout<<count<<endl;
+	            else{
+	                a= a+1;
+	                count++;
+	                cout<<count<<endl;
+	            }
+	        }
+	        else if(x%2==1){
+	            x=(x+1)/2;
+	            a=a+x;
+	            count++;
+	            if(a==b) cout<<count<<endl;
+	            else if(a<b){
+	                a=a+1;
+	                count++;
+	                cout<<count<<endl;
+	            }
+	        }
+	    }
+	   else if(a>b){
+	       int f= (a-b);
+	       cout<<f<<endl;
+	   }
+	}
+	return 0;
+}
+
+
+
+/// Wrong answer😅😅😅😅
